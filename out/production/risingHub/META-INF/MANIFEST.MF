@@ -1,7 +1,0 @@
-Manifest-Version: 1.0.1
-Main-Class: fm.bernardo.risinghub.Main
-Created-By: Bernardo de Oliveira
-Last-Change: 05.12.2018 - 23:51
-Application-Name: JavaLauncher
-Application-Description: RisingHub Launcher in Java
-Application-Version: 0.6.1
