@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane stylesheets="@../css/Main.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fm.bernardo.risinghub.classes.Controller">
+    <Button id="playButton" fx:id="playButton" disable="true" layoutX="416.0" layoutY="245.0" onAction="#loginAndPlay" prefHeight="100.0" prefWidth="100.0">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+    <Label alignment="CENTER" layoutX="91.0" layoutY="249.0" styleClass="formLabel" text="Language" textFill="WHITE" />
+    <Label alignment="CENTER" layoutX="91.0" layoutY="281.0" styleClass="formLabel" text="Username" textFill="WHITE" />
+    <Label alignment="CENTER" layoutX="91.0" layoutY="312.0" styleClass="formLabel" text="Password" textFill="WHITE" />
+    <ChoiceBox layoutX="218.0" layoutY="249.0" prefWidth="175.0" value="German">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="German" />
+                <String fx:value="English" />
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <TextField fx:id="tbx_username" layoutX="218.0" layoutY="281.0" onAction="#enterForm" prefWidth="175.0" />
+    <PasswordField fx:id="tbx_password" layoutX="218.0" layoutY="312.0" onAction="#enterForm" prefWidth="175.0" />
+    <Pane id="banner" layoutX="5.0" layoutY="32.0" prefHeight="200.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
+    <MenuBar id="menuBar" layoutX="5.0" prefHeight="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Menu mnemonicParsing="false" text="Settings">
+            <CheckMenuItem fx:id="startupCheck" mnemonicParsing="false" onAction="#startup" text="Start on startup" />
+            <MenuItem mnemonicParsing="false" onAction="#shutdown" text="Close" />
+        </Menu>
+        <Menu mnemonicParsing="false" text="Info">
+            <MenuItem mnemonicParsing="false" onAction="#openWebsite" text="RisingHub" />
+         <MenuItem mnemonicParsing="false" onAction="#openRegister" text="Register" />
+            <MenuItem mnemonicParsing="false" onAction="#showInformation" text="About" />
+        </Menu>
+    </MenuBar>
+   <ProgressBar fx:id="progressBarAll" layoutX="5.0" layoutY="374.0" prefHeight="25.0" progress="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   <Label fx:id="infoLabelAll" alignment="CENTER" layoutX="291.0" layoutY="378.0" prefHeight="25.0" text="Undefined" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   <ProgressBar fx:id="progressBarSingle" layoutX="5.0" layoutY="350.0" prefHeight="25.0" progress="0.0" visible="false" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   <Label fx:id="infoLabelSingle" alignment="CENTER" layoutX="291.0" layoutY="354.0" prefHeight="25.0" text="Undefined" visible="false" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+</AnchorPane>
